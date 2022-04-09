@@ -106,7 +106,7 @@ function submit() {
               <td class="px-6 py-4">{{ file.created_at }}</td>
               <td class="px-6 py-4 text-right">
                 <a
-                  href="#"
+                  :href="file.link"
                   class="
                     font-medium
                     text-blue-600

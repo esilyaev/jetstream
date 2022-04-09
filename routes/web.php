@@ -34,10 +34,6 @@ Route::middleware([
   Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
   })->name('dashboard');
-  Route::get('/storage', function () {
-    return Inertia::render('Storage', [
-      'files' => File::all()
-    ]);
-  })->name('storage');
+  Route::get('/filestorage', [FileController::class, 'index'])->name('filestorage');
   Route::post('/file', [FileController::class, 'store']);
 });

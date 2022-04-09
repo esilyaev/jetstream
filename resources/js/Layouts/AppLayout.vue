@@ -62,8 +62,8 @@ const logout = () => {
               </div>
               <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                 <JetNavLink
-                  :href="route('storage')"
-                  :active="route().current('storage')"
+                  :href="route('filestorage')"
+                  :active="route().current('filestorage')"
                 >
                   Storage
                 </JetNavLink>
