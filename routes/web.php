@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\PDFViewer;
 use App\Models\File;
 use Illuminate\Foundation\Application;
+use Illuminate\Routing\ViewController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -36,4 +38,5 @@ Route::middleware([
   })->name('dashboard');
   Route::get('/filestorage', [FileController::class, 'index'])->name('filestorage');
   Route::post('/file', [FileController::class, 'store']);
+  Route::get('/view/{filename}', [PDFViewer::class, 'view']);
 });

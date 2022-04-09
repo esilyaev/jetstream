@@ -22,7 +22,7 @@ class FileController extends Controller
             'name' => $file->name,
             'file_path' => $file->file_path,
             'created_at' => $file->created_at,
-            'link' => 'storage/' . $link,
+            'link' => 'view/' . $link,
           ];
         }
       )
